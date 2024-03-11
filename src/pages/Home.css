@@ -1,0 +1,199 @@
+
+body{
+    background-color:white;
+}
+
+
+.banner-image{
+    background-image: url(src/store/banner5.jpg);
+    background-size: cover;
+    transform: translateY(-50px);
+}
+.cardhome{
+    border-radius: 10px;
+    margin: 0.2rem;
+    margin-top: 4rem;
+    height: 18rem;
+    border:none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.cardhome:hover{
+    border-radius: 10px;
+    margin: 0.2rem;
+    margin-top: 4rem;
+    height: 18rem;
+    border:none;
+    box-shadow: 0px 5px 5px -3px  rgba(24, 24, 24, 0.753);
+    
+}
+    
+.imgbox{
+    position: relative;
+    transform: translateY(-90px);
+    width: 100%;
+    height: 100%;
+
+}
+.imgbox img{
+    position: relative;
+    width: 90%;
+    background-color: transparent;
+}
+.card-bodyhome{
+    position: relative;
+    transform: translateY(-53px);
+     
+}
+
+
+.cbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    border-radius: 70px;
+    
+}
+.centertop{
+    margin: 8%;
+    margin-top: -3%;
+
+}
+.centertop h4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 191, 0);
+
+}
+.centertop h1{
+    font-size: 70px;
+}
+.toplist{
+    
+        display: flex;
+        justify-content: space-around; /* or use 'space-between' or 'space-evenly' as needed */
+        
+        flex-direction: row;
+
+      
+}
+
+
+.bannertext{
+    transform: translateY(-360px);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+    color: white ;
+}   
+.bannert{
+    display: flex;
+    gap: 20px;
+}
+
+.offer{
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top:10%;
+    width:100%;
+    margin-bottom: 10%;
+    height:10vh;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+}
+.leftoffer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+    
+}
+.coupon{
+    font-size: 35px;
+    background-color: rgba(177, 176, 176, 0.829);
+    color: rgb(6, 6, 6);
+    width: 160px;
+    height: fit-content;
+    box-sizing: border-box;
+    border:1px dashed white;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.leftrightoffer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+    gap: 10px;
+}
+.input-group{
+    width: 50%;
+}
+.btn-danger{
+    width:20%;
+    height: 10%;
+}
+.review{
+    background-color:rgba(241, 241, 241, 0.268);
+     width: 70vw;
+     min-height: 10vh;
+     /* border: 1px solid black; */
+     border-radius: 10px   ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+.reviewpost{
+    display: flex;
+    justify-content: flex-start ;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    background-color:rgb(255, 255, 255);
+    max-width: 160%;
+    height:auto ;
+    word-wrap: break-word;
+    overflow: normal;
+    word-break:break-all;
+    
+    margin: 3px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    
+}
+.reviewposts{
+    display: flex;
+    justify-content: flex-start ;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    background-color: transparent;
+
+    width: 60%;
+    margin: 2px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.reviewposts .reviewpost p{
+    word-wrap: break-word;
+    overflow: auto;
+    height:auto ;
+    text-align: left;
+
+}
+
