@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 export default function Menu() {
-  const {IsAuthenticated,} = useContext(Context);
+  const {IsAuthenticated,setrefresh} = useContext(Context);
    
   const handleaddtocart = async(productname,Price)=>{
 
@@ -23,6 +23,7 @@ export default function Menu() {
       })
       console.log(data)
       toast.success("Added to Cart");
+      setrefresh((prev)=>!prev)
    
   }
   catch(error){

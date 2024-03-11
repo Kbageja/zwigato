@@ -31,7 +31,7 @@ useEffect(()=>{
   })
 }
 fetchuser();
-},[IsAuthenticated])
+},[])
 
 
     return(

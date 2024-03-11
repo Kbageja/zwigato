@@ -7,10 +7,10 @@
 
     function Cartbody () {
         const [productlist,setproductlist] = useState([])
+        const {user,IsAuthenticated,refresh,setrefresh} = useContext(Context)
         
        
         const handleget = async() =>{
-            
             try {
                 console.log(productlist);
                 
@@ -27,10 +27,10 @@
         useEffect(() => {
             handleget();
             
-        },[]);
+        },[refresh,IsAuthenticated]);
         
 
-        return (
+        return (    
             
         
             <div>
