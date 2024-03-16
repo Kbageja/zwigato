@@ -6,7 +6,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/navbar.css";
-import Cartbody from "../components/navbar/cartbody";
+import Cartbody from "../components/navbar/Cartbody";
 
 
 
