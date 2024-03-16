@@ -1,11 +1,11 @@
-
+@import url("/src/store/banner5.jpg");
 body{
     background-color:white;
 }
 
 
 .banner-image{
-    background-image: url(src/store/banner5.jpg);
+    background-image: url(/src/store/banner5.jpg);
     background-size: cover;
     transform: translateY(-50px);
 }
