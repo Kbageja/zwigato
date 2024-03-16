@@ -4,7 +4,7 @@ import App from './App.jsx'
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-export const server = "http://localhost:5000"
+export const server = "https://zwigato-backend-xt53.onrender.com"
 export const Context = createContext({IsAuthenticated:false});
 
 
