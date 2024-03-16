@@ -1,17 +1,20 @@
 import Topcard from "./topcard";
+import top5 from "/src/store/top5.jpg"
+import top3 from "/src/store/top3.jpg"
+
 function Top(){
     const topobj  = [{
-        image:"src/store/top5.jpg",
+        image:top5,
         name:"Veg Burger",
         price:50,
 },
 {
-    image:"src/store/top3.jpg",
+    image:top3,
     name:"Maharaja Burger",
     price:190,
 },
 {
-    image:"src/store/top5.jpg",
+    image:top5,
     name:"Classic Cheese Burger",
     price:160,
 
