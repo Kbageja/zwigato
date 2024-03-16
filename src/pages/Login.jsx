@@ -23,7 +23,7 @@ const Login= () => {
           },
           withCredentials:true,
         })
-        console.log(data)
+        
         toast.success(data.message)
         setIsAuthenticated(true);
         setemail("");

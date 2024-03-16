@@ -121,10 +121,23 @@ body{
     background-color: rgba(177, 176, 176, 0.829);
     color: rgb(6, 6, 6);
     width: 160px;
-    height: fit-content;
+    height: 70px;
     box-sizing: border-box;
     border:1px dashed white;
-    border-radius: 20px;
+    border-radius: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.coupon:hover{
+    font-size: 35px;
+    background-color: rgba(177, 176, 176, 0.829);
+    color: rgb(6, 6, 6);
+    width: 160px;
+    /* min-height: fit-content; */
+    height: 70px;
+    box-sizing: border-box;
+    border:1px dashed white;
+    border-radius: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -194,6 +207,11 @@ body{
     overflow: auto;
     height:auto ;
     text-align: left;
+
+}
+.card-text{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 

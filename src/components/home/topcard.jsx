@@ -1,19 +1,22 @@
+import { useContext } from "react";
 import { IoMdAdd } from "react-icons/io";
+import { Context } from "../../main";
 function Topcard({topdata}){
+  const {handleaddtocart}=useContext(Context);
     return(<>
     
-    <div class="card cardhome" style={{width: "23rem"}}>
+    <div className="card cardhome" style={{width: "23rem"}}>
       <center>
     <div className="imgbox">
   <img src={topdata.image}  alt="..."/>
   </div>
   </center>
   <div className="cbody">
-  <div class="card-body card-bodyhome">
+  <div className="card-body card-bodyhome">
     <center>
-    <h4 class="card-title"><b>{topdata.name}</b></h4>
-    <p class="card-text">{topdata.desc}</p>
-    <a href="#" class="btn btn-warning add"><IoMdAdd /></a>
+    <h4 className="card-title"><b>{topdata.name}</b></h4>
+    <p className="card-text">₹{topdata.price}/-</p>
+    <button className="btn btn-warning add" onClick={()=>{handleaddtocart(topdata.name,topdata.price,)}}><IoMdAdd /></button>
     </center>
   </div>
   </div>

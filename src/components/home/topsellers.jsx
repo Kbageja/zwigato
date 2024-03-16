@@ -3,17 +3,17 @@ function Top(){
     const topobj  = [{
         image:"src/store/top5.jpg",
         name:"Veg Burger",
-        desc:"cheese,vegpatty,lettuce,tomato",
+        price:50,
 },
 {
     image:"src/store/top3.jpg",
     name:"Maharaja Burger",
-    desc:"Jalapenos,nachos,cheese,lettuce",
+    price:190,
 },
 {
     image:"src/store/top5.jpg",
     name:"Classic Cheese Burger",
-    desc:"Jalapenos,nachos,cheese sauce",
+    price:160,
 
 },]
     return(<div className="topbody">
@@ -22,9 +22,9 @@ function Top(){
         <h1> <b>Choose & Enjoy</b></h1>
         </center>
         <div className="toplist">
-        {topobj&&topobj.map((topdata)=>(
+        {topobj&&topobj.map((topdata,index)=>(
          
-            <Topcard topdata ={topdata}></Topcard>
+            <Topcard topdata ={topdata} key={index}></Topcard>
             
         ))}
         </div>

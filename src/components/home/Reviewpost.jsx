@@ -6,13 +6,12 @@ import { Navigate } from "react-router-dom";
 
 function Reviewpost() {
   const [reviews, setReviews] = useState([]);
- 
+ const {refresh,setrefresh} = useContext(Context);
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const { data } = await axios.get(`${server}/review/allreview`, { withCredentials: true });
-       
         setReviews(data.reviews);
       } catch (error) {
         toast.error(error.response.data.message);
@@ -21,17 +20,17 @@ function Reviewpost() {
     };
 
     fetchReviews();
-  }, []);
+  }, [refresh]);
   
 
   return (
     <div className="reviewposts">
       {reviews.map((review) => (
-        <p className="reviewpost" key={review._id}>
+        <div className="reviewpost" key={review._id}>
           <h5>{review.user}</h5>
          
           <p>{review.review}</p>
-        </p>
+        </div>
       ))}
     </div>
   );

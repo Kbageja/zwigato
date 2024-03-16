@@ -11,7 +11,7 @@ import Cartbody from "../components/navbar/cartbody";
 
 
 function Navbar() {
-  const { IsAuthenticated, setIsAuthenticated ,setuser,user,setrefresh} = useContext(Context);
+  const { IsAuthenticated, setIsAuthenticated ,setuser,user,setrefresh,setlogout} = useContext(Context);
  
   
   const [showOffCanvas, setShowOffCanvas] = useState(false);
@@ -26,10 +26,12 @@ function Navbar() {
         const { data } = await axios.get(`${server}/user/logout`, {
             withCredentials: true,
         });
-        console.log(data);  // Log the response for debugging
-        toast.success("Logout successful");
+      
+        toast.success("Logout successfully");
         setIsAuthenticated(false);
-        setrefresh(false);
+        setrefresh((prev)=>!prev);
+        setlogout((prev)=>!prev);
+        setuser({})
     } catch (error) {
         console.error('Logout error:', error);
         toast.error("Internal error during logout");
@@ -55,7 +57,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={"/contact"}>
-                CONTACT
+                CONTACT US
               </Link>
             </li>
             <li className="nav-item dropdown">

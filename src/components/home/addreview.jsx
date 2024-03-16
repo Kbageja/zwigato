@@ -7,7 +7,7 @@ import { Navigate } from "react-router-dom";
 
 function Addreview() {
   const [review, setreview] = useState('');
-  const { IsAuthenticated } = useContext(Context);
+  const { IsAuthenticated,setrefresh } = useContext(Context);
 
   const handleonadd = async () => {
     if (!IsAuthenticated) {
@@ -25,7 +25,7 @@ function Addreview() {
         },
         withCredentials: true,
       });
-
+      setrefresh((prev)=>!prev);
       toast.success(data.message);
       setreview('');
     } catch (error) {

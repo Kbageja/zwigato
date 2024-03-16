@@ -60,7 +60,7 @@ const handleemailchange  = async()=>{
     <div className="applogin">
     <div className="blur-backgroundlogin"></div>
     <div className="contact-form-container form-container-login">
-      <h2>Contact</h2>
+      <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         {/* <label htmlFor="name">Name:</label>
         <input
