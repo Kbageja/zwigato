@@ -1,6 +1,7 @@
 import Topcard from "./topcard";
 import top5 from "/src/store/top5.jpg"
 import top3 from "/src/store/top3.jpg"
+import top6 from "/src/store/top6.jpg"
 
 function Top(){
     const topobj  = [{
@@ -14,7 +15,7 @@ function Top(){
     price:190,
 },
 {
-    image:top5,
+    image:top6,
     name:"Classic Cheese Burger",
     price:160,
 
