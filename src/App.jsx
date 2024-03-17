@@ -1,6 +1,6 @@
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import Navbar from './pages/navbar';
-import Orders from './pages/Orders';
+
 import Home from './pages/Home';
 import './App.css'
 import Menu from './pages/Menu';
@@ -40,7 +40,7 @@ fetchuser();
             <Navbar/>
             <Routes>
                 <Route path='/' element={ <Home/> }/>
-                <Route path = '/orders' element = {<Orders/>}/>
+               
                 <Route path = '/menu' element = {<Menu/>}/>
                 <Route path = '/contact' element = {<Contact/>}/>
                 <Route path = '/cart' element = {<Cart/>}/>

@@ -51,11 +51,6 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/orders"}>
-                ORDERS
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to={"/contact"}>
                 CONTACT US
               </Link>
