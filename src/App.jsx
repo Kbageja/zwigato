@@ -13,7 +13,7 @@ import { Toaster } from 'react-hot-toast';
 import { useContext, useEffect } from 'react';
 import axios from 'axios';
 import { Context, server } from './main';
-import Successpayment from './pages/successpayment.jsx';
+import Successpayment from './pages/Successpayment.jsx';
 
 
 
