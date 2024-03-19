@@ -13,6 +13,7 @@ import { Toaster } from 'react-hot-toast';
 import { useContext, useEffect } from 'react';
 import axios from 'axios';
 import { Context, server } from './main';
+import Successpayment from './pages/successpayment';
 
 
 
@@ -40,7 +41,7 @@ fetchuser();
             <Navbar/>
             <Routes>
                 <Route path='/' element={ <Home/> }/>
-               
+               <Route path='/api/verify' element={<Successpayment/>}></Route>
                 <Route path = '/menu' element = {<Menu/>}/>
                 <Route path = '/contact' element = {<Contact/>}/>
                 <Route path = '/cart' element = {<Cart/>}/>

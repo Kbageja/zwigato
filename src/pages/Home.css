@@ -215,3 +215,15 @@ body{
 
 }
 
+.paymentsuccess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    margin-top: 10%;
+}
+.successtext{
+    font-size: 90px;
+}

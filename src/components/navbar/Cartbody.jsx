@@ -11,6 +11,8 @@ function Cartbody() {
     const { refresh, IsAuthenticated,setrefresh ,logout} = useContext(Context);
     const [totalPrice, setTotalPrice] = useState(0);
 
+    
+
     const handlecoupon =()=>{
         const couponinput = document.getElementById("couponinput");
         if(couponinput.value==='xbbhdd'){
@@ -22,6 +24,68 @@ function Cartbody() {
             toast.error("No such coupon exist");
         }
     }
+
+    const handlecheckout = async () => {
+        const checkoutprice = document.getElementById('totalprice');
+        // Check if the element is found
+        if (checkoutprice) {
+            // Use textContent or innerText to get the textual content
+            const checkvalue = checkoutprice.textContent;
+            
+            
+            try {
+
+                const {key} = await axios.get(`${server}/api/getkey`,{
+                    withCredentials:true,
+                })
+                const response = await axios.get(`${server}/user/me`,{withCredentials:true,})
+                const name = response.data.user.name;
+                const email= response.data.user.email;
+              
+                const { data:{order} } = await axios.post(
+                    `${server}/api/checkout`,
+                    {
+                        checkvalue
+                    },
+                    {
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        withCredentials: true,
+                    }
+                );
+
+                const options = {
+                    key, // Enter the Key ID generated from the Dashboard
+                    amount:order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                    currency: "INR",
+                    name: "Zwigato group",
+                    description: "Test Transaction",
+                    order_id:order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                    callback_url: `${server}/api/verify`,
+                    prefill: {
+                        name,
+                        email,
+                        contact: "9000090000"
+                    },
+                    notes: {
+                        address: "Razorpay Corporate Office"
+                    },
+                    theme: {
+                        color: "#000000"
+                    }
+                };
+                const razor = new Razorpay(options);
+                razor.open();           
+                
+            } catch (error) {
+                console.log(error);
+            }
+        } else {
+            console.log('Element with id "totalprice" not found.');
+        }
+    };
+    
 
     const handleGetProducts = async () => {
         try {
@@ -172,18 +236,16 @@ function Cartbody() {
                 </div>
                 <div className="totalprice"> 
                 <span>Total Price:- </span>
-                <span id='totalprice'>₹{totalPrice-80}</span>
+                <span id='totalprice2'>₹<span id='totalprice'>{totalPrice-80}</span></span>
                 </div>
                 </>
             ):(
                 <div className="totalprice"> 
                 <span>Total Price:- </span>
-                <span id='totalprice'>₹{totalPrice}</span>
+                <span id='totalprice2'>₹<span id='totalprice'>{totalPrice}</span></span>
                 </div>
-
-            )
-
-            }               
+            )}
+             <button className='btn btn-warning checkout' onClick={()=>{handlecheckout()}}>Check Out</button>               
                 </div>
     );
 }
